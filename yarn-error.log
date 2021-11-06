@@ -1,0 +1,82 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Juan\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js husky install
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Users\Juan\AppData\Local\Microsoft\WindowsApps;;C:\Users\Juan\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Juan\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  TypeError: Cannot convert object to primitive value
+      at Array.join (<anonymous>)
+      at ShellString.[format] (C:\Users\Juan\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:135827:80)
+      at ShellString.toString (C:\Users\Juan\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:135823:30)
+      at sh (C:\Users\Juan\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:135916:55)
+      at C:\Users\Juan\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:62468:52
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Juan\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\Juan\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "rest",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "husky": {
+        "hooks": {
+          "pre-commit": "prettier --write . && git add -A ."
+        }
+      },
+      "start": "npx nodemon --exec ts-node src/server.ts",
+      "typeorm": "ts-node-dev node_modules/typeorm/cli.js",
+      "test": "NODE_ENV=test jest",
+      "postinstall": "npx husky install",
+      "lint": "prettier --check .",
+      "format": "prettier --write ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@types/jest": "^27.0.2",
+      "dotenv": "^10.0.0",
+      "express": "^4.17.1",
+      "jest": "^27.3.1",
+      "nodemailer": "^6.7.0",
+      "pg": "^8.7.1",
+      "reflect-metadata": "^0.1.13",
+      "ts-jest": "^27.0.7",
+      "ts-node": "^10.4.0",
+      "typeorm": "^0.2.38",
+      "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+      "@commitlint/cli": "^14.1.0",
+      "@commitlint/config-conventional": "^14.1.0",
+      "@types/express": "^4.17.13",
+      "@types/nodemailer": "^6.4.4",
+      "@types/supertest": "^2.0.11",
+      "@types/uuid": "^8.3.1",
+      "husky": "^7.0.4",
+      "nodemon": "^2.0.14",
+      "prettier": "^2.4.1",
+      "supertest": "^6.1.6",
+      "ts-node-dev": "^1.1.8",
+      "typescript": "^4.4.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

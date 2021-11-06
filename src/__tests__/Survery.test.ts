@@ -16,14 +16,17 @@ describe("Surveys", () => {
     expect(response.body).toHaveProperty("id");
   });
 
-  it("should be able to get all surveys", async () => {
-    await request(app).post("/surveys").send({
-      title: "Title Example",
-      description: "Description Example",
+  it("should be able to create a new survey 2", async () => {
+    const response = await request(app).post("/surveys").send({
+      title: "Title Example2",
+      description: "Description Example2",
     });
 
-    const response = await request(app).get("/surveys");
+    expect(response.status).toBe(201);
+  });
 
+  it("should be able to get all surveys", async () => {
+    const response = await request(app).get("/surveys");
     expect(response.body.length).toBe(2);
   });
 });
